@@ -616,7 +616,7 @@ public class Main extends javax.swing.JFrame {
                         robot.mousePress(InputEvent.BUTTON1_MASK);
                         robot.mouseRelease(InputEvent.BUTTON1_MASK);
                         //click square
-                        for (int a = 0; a < 10; a++) {
+                        for (int a = 0; a < 100; a++) {
                             if (running) {
                                 for (int i = 0; i < 7; i++) {
                                     for (int j = 0; j < 7; j++) {
