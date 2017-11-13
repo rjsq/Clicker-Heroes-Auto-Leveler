@@ -631,12 +631,13 @@ public class Main extends javax.swing.JFrame {
                                         robot.mouseRelease(InputEvent.BUTTON1_MASK);
                                     }
                                 }
+                                //click yes
+                                robot.delay(50);
+                                robot.mouseMove((int) (yes[0] * size), (int) (yes[1] * size));
+                                robot.mousePress(InputEvent.BUTTON1_MASK);
+                                robot.mouseRelease(InputEvent.BUTTON1_MASK);
                             }
-                            //click yes
-                            robot.delay(50);
-                            robot.mouseMove((int) (yes[0] * size), (int) (yes[1] * size));
-                            robot.mousePress(InputEvent.BUTTON1_MASK);
-                            robot.mouseRelease(InputEvent.BUTTON1_MASK);
+
                         }
 
 //                        robot.delay(100);
