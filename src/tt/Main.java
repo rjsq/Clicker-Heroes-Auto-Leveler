@@ -8,9 +8,6 @@ import java.awt.Dimension;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.event.InputEvent;
-import java.awt.event.KeyEvent;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JFrame;
 import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
@@ -142,11 +139,9 @@ public class Main extends javax.swing.JFrame {
 //            System.out.println("Key Pressed: " + NativeKeyEvent.getKeyText(e.getKeyCode()));
 
             if (e.getKeyCode() == NativeKeyEvent.VC_ESCAPE) {
-                try {
-                    GlobalScreen.unregisterNativeHook();
-                } catch (NativeHookException ex) {
-                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                //GlobalScreen.unregisterNativeHook();
+                //Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+
             }
             if (e.getKeyCode() == NativeKeyEvent.VC_BACKQUOTE) {
                 running = false;
@@ -618,12 +613,12 @@ public class Main extends javax.swing.JFrame {
                         //click square
                         for (int a = 0; a < 100; a++) {
                             if (running) {
-                                for (int i = 0; i < 5; i++) {
+                                for (int i = 0; i < 6; i++) {
                                     for (int j = 0; j < 7; j++) {
                                         //click location
                                         int[] top = new int[2];
                                         top[0] = (int) (tl[0] + (br[0] - tl[0]) * 0.05 + (br[0] - tl[0]) * 0.95 * 0.1667 * j);
-                                        top[1] = (int) (tl[1] + (br[1] - tl[1]) * 0.15 + (br[1] - tl[1]) * 0.9 * i * 0.20 * 0.5);
+                                        top[1] = (int) (tl[1] + (br[1] - tl[1]) * 0.15 + (br[1] - tl[1]) * 0.9 * i * 0.16 * 0.5);
 
                                         robot.delay(50);
                                         robot.mouseMove((int) (top[0] * size), (int) (top[1] * size));
@@ -729,7 +724,7 @@ public class Main extends javax.swing.JFrame {
                     Thread.currentThread().interrupt();
 
                 } catch (AWTException | InterruptedException ex) {
-                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                    // Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         }
@@ -756,8 +751,7 @@ public class Main extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Main.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            // java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
         }
         //</editor-fold>
