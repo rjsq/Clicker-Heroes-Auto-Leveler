@@ -576,42 +576,50 @@ public class Main extends javax.swing.JFrame {
                     while (running) {
 
                         flag++;
+                        if (flag % 2 == 0) {
+                            //click sword master tab
+                            robot.delay(250);
+                            robot.mouseMove((int) (tab1[0] * size), (int) (tab1[1] * size));
+                            robot.mousePress(InputEvent.BUTTON1_MASK);
+                            robot.mouseRelease(InputEvent.BUTTON1_MASK);
 
-                        //click sword master tab
-                        robot.delay(250);
-                        robot.mouseMove((int) (tab1[0] * size), (int) (tab1[1] * size));
-                        robot.mousePress(InputEvent.BUTTON1_MASK);
-                        robot.mouseRelease(InputEvent.BUTTON1_MASK);
+                            //level up sword master
+                            robot.delay(250);
+                            robot.mouseMove((int) (sw[0] * size), (int) (sw[1] * size));
+                            robot.mousePress(InputEvent.BUTTON1_MASK);
+                            robot.mouseRelease(InputEvent.BUTTON1_MASK);
 
-                        //level up sword master
-                        robot.delay(250);
-                        robot.mouseMove((int) (sw[0] * size), (int) (sw[1] * size));
-                        robot.mousePress(InputEvent.BUTTON1_MASK);
-                        robot.mouseRelease(InputEvent.BUTTON1_MASK);
+                            //click sword master tab
+                            robot.delay(250);
+                            robot.mouseMove((int) (tab1[0] * size), (int) (tab1[1] * size));
+                            robot.mousePress(InputEvent.BUTTON1_MASK);
+                            robot.mouseRelease(InputEvent.BUTTON1_MASK);
+                        }
 
-                        //click hero tab
-                        robot.delay(250);
-                        robot.mouseMove((int) (tab2[0] * size), (int) (tab2[1] * size));
-                        robot.mousePress(InputEvent.BUTTON1_MASK);
-                        robot.mouseRelease(InputEvent.BUTTON1_MASK);
+                        if (flag % 2 == 1) {
+                            //click hero tab
+                            robot.delay(250);
+                            robot.mouseMove((int) (tab2[0] * size), (int) (tab2[1] * size));
+                            robot.mousePress(InputEvent.BUTTON1_MASK);
+                            robot.mouseRelease(InputEvent.BUTTON1_MASK);
 
-                        //level up hero
-                        robot.delay(250);
-                        robot.mouseMove((int) (hero[0] * size), (int) (hero[1] * size));
-                        robot.mousePress(InputEvent.BUTTON1_MASK);
-                        robot.mouseRelease(InputEvent.BUTTON1_MASK);
+                            //level up hero
+                            robot.delay(250);
+                            robot.mouseMove((int) (hero[0] * size), (int) (hero[1] * size));
+                            robot.mousePress(InputEvent.BUTTON1_MASK);
+                            robot.mouseRelease(InputEvent.BUTTON1_MASK);
 
-                        robot.delay(250);
-                        robot.mouseWheel(100);
+                            robot.delay(250);
+                            robot.mouseWheel(100);
 
-                        //click hero tab
-                        robot.delay(250);
-                        robot.mouseMove(
-                                (int) (tab2[0] * size), (int) (tab2[1] * size));
-                        robot.mousePress(InputEvent.BUTTON1_MASK);
-                        robot.mouseRelease(InputEvent.BUTTON1_MASK);
-                        //click square
-                        for (int a = 0; a < 100; a++) {
+                            //click hero tab
+                            robot.delay(250);
+                            robot.mouseMove((int) (tab2[0] * size), (int) (tab2[1] * size));
+                            robot.mousePress(InputEvent.BUTTON1_MASK);
+                            robot.mouseRelease(InputEvent.BUTTON1_MASK);
+                            //click square
+                        }
+                        for (int a = 0; a < 50; a++) {
                             if (running) {
                                 for (int i = 0; i < 6; i++) {
                                     for (int j = 0; j < 7; j++) {
