@@ -618,7 +618,7 @@ public class Main extends javax.swing.JFrame {
                                         //click location
                                         int[] top = new int[2];
                                         top[0] = (int) (tl[0] + (br[0] - tl[0]) * 0.05 + (br[0] - tl[0]) * 0.95 * 0.1667 * j);
-                                        top[1] = (int) (tl[1] + (br[1] - tl[1]) * 0.15 + (br[1] - tl[1]) * 0.9 * i * 0.16 * 0.5);
+                                        top[1] = (int) (tl[1] + (br[1] - tl[1]) * 0.18 + (br[1] - tl[1]) * 0.9 * i * 0.1667 * 0.45);
 
                                         robot.delay(50);
                                         robot.mouseMove((int) (top[0] * size), (int) (top[1] * size));
