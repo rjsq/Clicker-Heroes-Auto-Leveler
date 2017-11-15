@@ -622,22 +622,24 @@ public class Main extends javax.swing.JFrame {
                         for (int a = 0; a < 50; a++) {
                             if (running) {
                                 for (int i = 0; i < 6; i++) {
-                                    for (int j = 0; j < 7; j++) {
+                                    for (int j = 0; j < 8; j++) {
                                         //click location
                                         int[] top = new int[2];
-                                        top[0] = (int) (tl[0] + (br[0] - tl[0]) * 0.05 + (br[0] - tl[0]) * 0.95 * 0.1667 * j);
+                                        top[0] = (int) (tl[0] + (br[0] - tl[0]) * 0.02 + (br[0] - tl[0]) * 0.98 * 0.142857 * j);
                                         top[1] = (int) (tl[1] + (br[1] - tl[1]) * 0.18 + (br[1] - tl[1]) * 0.9 * i * 0.1667 * 0.45);
 
-                                        robot.delay(50);
                                         robot.mouseMove((int) (top[0] * size), (int) (top[1] * size));
+                                        robot.delay(25);
                                         robot.mousePress(InputEvent.BUTTON1_MASK);
+                                        robot.delay(25);
                                         robot.mouseRelease(InputEvent.BUTTON1_MASK);
                                     }
                                 }
                                 //click yes
-                                robot.delay(50);
                                 robot.mouseMove((int) (yes[0] * size), (int) (yes[1] * size));
+                                robot.delay(25);
                                 robot.mousePress(InputEvent.BUTTON1_MASK);
+                                robot.delay(25);
                                 robot.mouseRelease(InputEvent.BUTTON1_MASK);
                             }
 
