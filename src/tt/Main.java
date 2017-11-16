@@ -611,7 +611,7 @@ public class Main extends javax.swing.JFrame {
 
                             robot.delay(250);
                             robot.mouseWheel(100);
-
+                            robot.delay(250);
                             //click hero tab
                             robot.delay(250);
                             robot.mouseMove((int) (tab2[0] * size), (int) (tab2[1] * size));
